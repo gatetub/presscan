@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report Card</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<form method="POST" action="/upload" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="Upload">
+    
+</form>
+<h1>Report Card</h1>
+
+<table>
+    <tr>
+        <th>Symptoms</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Fever</td>
+        <td>{{fo}}</td>
+    </tr>
+    <tr>
+        <td>Cough</td>
+        <td>{{cg}}</td>
+    </tr>
+    <tr>
+        <td>Fatigue</td>
+        <td>{{ft}}</td>
+    </tr>
+    <tr>
+        <td>Difficulty breathing </td>
+        <td>{{dibe}}</td>
+    </tr>
+    <tr>
+        <td>Age</td>
+        <td>{{ag}}</td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>{{gen}}</td>
+    </tr>
+    <tr>
+        <td>Blood pressure</td>
+        <td>{{blp}}</td>
+    </tr>
+    <tr>
+        <td>Cholesterol</td>
+        <td>{{chl}}</td>
+    </tr>
+</table>
+
+<h2>          Pedicted Disease is {{dis}}</h2>
+
+</body>
+</html>
